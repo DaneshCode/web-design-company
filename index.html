@@ -4,6 +4,23 @@
     <meta charset="utf-8" />
     <title>مینی پروژه</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="شرکت طراحی وب دانش‌کد - طراحی انواع وب‌سایت"
+    />
+
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://unicons.iconscout.com" />
+    <link rel="preload" href="./css.css" as="style" />
+    <link rel="preload" href="./js/main.js" as="script" />
+    <link
+      rel="preload"
+      href="./Fonts/Lalezar-Regular.ttf"
+      as="font"
+      crossorigin
+    />
+
+    <!-- Existing styles -->
     <link rel="stylesheet" href="./css.css" />
     <link
       rel="stylesheet"
@@ -14,11 +31,32 @@
       href="../maghaleh project/images/favicon.png"
       type="image/x-icon"
     />
+
+    <!-- Theme script -->
+    <script>
+      // Set dark theme as default
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
   </head>
   <body>
     <div class="container">
+      <!-- Add progress bar -->
+      <div class="scroll-progress"></div>
+
+      <!-- Add loading indicators -->
+      <div class="loading-overlay" aria-hidden="true">
+        <div class="loader"></div>
+      </div>
+
+      <!-- Theme toggle button -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="uil uil-moon"></i>
+      </button>
+
+      <!-- Header Section -->
       <header id="index" class="header">
-        <nav>
+        <nav role="navigation">
           <ul id="header">
             <li><a href="#index">صفحه اصلی</a></li>
             <li><a href="#about-us">درباره ما</a></li>
@@ -29,64 +67,72 @@
         <h1>شرکت طراحی وب <span>دانش‌کد</span></h1>
         <p>طراحی انواع سایت های شرکتی شخصی ، فروشگاهی و ...</p>
       </header>
+      <!-- Main Content -->
       <main>
+        <!-- Add search filter before members grid -->
+        <div class="search-container">
+          <input type="text" id="memberSearch" placeholder="جستجوی اعضا..." />
+        </div>
+
+        <!-- Company Members Section -->
         <section id="company-members" class="members">
           <h1>اعضای شرکت</h1>
-          <div class="box">
-            <img src="../maghaleh project/images/3.jpg" alt="دانشگاه آکسفورد" />
-            <h2>دانشگاه آکسفورد</h2>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
-              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد
-              نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
-              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-            </p>
-          </div>
-          <div class="box">
-            <img
-              src="../maghaleh project/images/4.jpg"
-              alt="دانشگاه استنفورد"
-            />
-            <h2>دانشگاه استنفورد</h2>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
-              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد
-              نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
-              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-            </p>
-          </div>
-          <div class="box">
-            <img src="../maghaleh project/images/5.jpg" alt="دانشگاه کمبریج" />
-            <h2>دانشگاه کمبریج</h2>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
-              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد
-              نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
-              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-            </p>
+          <!-- Grid layout for member boxes -->
+          <div class="members-grid">
+            <div class="box">
+              <img loading="lazy" src="./images/3.jpg" alt="دانشگاه آکسفورد" />
+              <h2>دانشگاه آکسفورد</h2>
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
+                زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
+                پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+              </p>
+            </div>
+            <div class="box">
+              <img loading="lazy" src="./images/4.jpg" alt="دانشگاه استنفورد" />
+              <h2>دانشگاه استنفورد</h2>
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
+                زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
+                پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+              </p>
+            </div>
+            <div class="box">
+              <img loading="lazy" src="./images/5.jpg" alt="دانشگاه کمبریج" />
+              <h2>دانشگاه کمبریج</h2>
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
+                زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
+                پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+              </p>
+            </div>
           </div>
         </section>
+        <!-- About Us Section -->
         <section id="about-us" class="about">
           <div class="circle">
             <h1>درباره شرکت</h1>
@@ -105,7 +151,19 @@
             </p>
           </div>
         </section>
+
+        <!-- Add contact form before footer -->
+        <section id="contact" class="contact-section">
+          <h2>ارتباط با ما</h2>
+          <form id="contactForm" class="contact-form">
+            <input type="text" name="name" placeholder="نام" required />
+            <input type="email" name="email" placeholder="ایمیل" required />
+            <textarea name="message" placeholder="پیام شما" required></textarea>
+            <button type="submit" class="button">ارسال</button>
+          </form>
+        </section>
       </main>
+      <!-- Footer Section -->
       <footer id="call" class="footer">
         <h3>Find me on social media</h3>
         <div class="social-links">
@@ -158,5 +216,46 @@
         <h3>All rights reserved © Danesh Khodadad 2024</h3>
       </footer>
     </div>
+
+    <!-- Add lightbox container -->
+    <div class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" />
+    </div>
+
+    <!-- Theme toggle script -->
+    <script>
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        const theme =
+          document.documentElement.getAttribute('data-theme') === 'dark'
+            ? 'light'
+            : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+      });
+    </script>
+
+    <!-- New: Scroll event to fade in/out "arrow-up" button -->
+    <script>
+      const arrowUp = document.querySelector('.arrow-up');
+      window.addEventListener('scroll', () => {
+        // Fade in after scrolling 300px; otherwise, hide.
+        arrowUp.style.opacity = window.scrollY > 300 ? '1' : '0';
+      });
+    </script>
+
+    <!-- Move scripts to end of body -->
+    <script src="./js/main.js" defer></script>
+    <script>
+      // Register service worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('./service-worker.js')
+          .then((registration) => console.log('ServiceWorker registered'))
+          .catch((err) =>
+            console.log('ServiceWorker registration failed: ', err),
+          );
+      }
+    </script>
   </body>
 </html>
