@@ -373,7 +373,7 @@ h6:hover {
 
 /* Add success message styling */
 .success-message {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 15px;
   border-radius: 8px;
@@ -382,8 +382,14 @@ h6:hover {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Add loading animation */
@@ -399,19 +405,28 @@ h6:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   animation: loading 1.5s infinite;
 }
 
 @keyframes loading {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Update button styles */
 .button,
 a.button,
-button[type="submit"] {
+button[type='submit'] {
   background-color: var(--accent-color);
   color: #ffffff;
   border-radius: 10px;
@@ -421,12 +436,13 @@ button[type="submit"] {
   cursor: pointer;
   text-decoration: none;
   box-shadow: var(--button-shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .button:hover,
 a.button:hover,
-button[type="submit"]:hover {
+button[type='submit']:hover {
   background-color: var(--button-hover-bg);
   transform: translateY(-2px);
   box-shadow: var(--button-hover-shadow);
@@ -434,7 +450,7 @@ button[type="submit"]:hover {
 
 .button:active,
 a.button:active,
-button[type="submit"]:active {
+button[type='submit']:active {
   transform: translateY(0);
   box-shadow: var(--button-shadow);
 }
@@ -452,6 +468,23 @@ button[type="submit"]:active {
 /* Remove duplicate button hover styles */
 .button:hover {
   background-color: var(--button-hover-bg);
+}
+
+.made {
+  padding: 2rem 0 0 0;
+  text-align: center;
+}
+
+.made a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.3rem;
+}
+
+.made a:hover {
+  color: #4f51e5;
+  text-decoration: underline;
 }
 
 /* Media queries for responsiveness */
